@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple gradient */
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Header */
+  header {
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Search Container */
+  .search-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px; /* Rounded edges */
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px; /* Rounded edges */
+    background: #ffffff; /* White background */
+    color: #6a11cb; /* Purple text */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+  }
+  
+  button:active {
+    transform: scale(0.95); /* Shrink on click */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Results Container */
+  .results-container {
+    margin-top: 30px;
+    background: #ffffff; /* White background */
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Card shadow */
+  }
+  
+  .results-container h2 {
+    color: #6a11cb; /* Purple heading */
+    margin-bottom: 20px;
+  }
+  
+  .song-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .song-card {
+    background: #f9f9f9; /* Light background for cards */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .song-card h3 {
+    margin: 0;
+    color: #333; /* Dark text */
+  }
+  
+  .song-card p {
+    margin: 5px 0;
+    color: #666; /* Gray text */
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  
