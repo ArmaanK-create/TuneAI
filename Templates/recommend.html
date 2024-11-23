@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TuneAI - Recommendations</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>🎵 TuneAI Recommendations</h1>
+    <p>Enter a song to get personalized recommendations.</p>
+  </header>
+  <main>
+    <!-- Search Container -->
+    <div class="search-container">
+      <input type="text" id="songInput" placeholder="Enter a song..." />
+      <button onclick="getRecommendations()">Get Recommendations</button>
+    </div>
+
+    <!-- Results Container -->
+    <div id="results" class="results-container">
+      <h2>Recommended Songs</h2>
+      <ul id="songList"></ul>
+    </div>
+  </main>
+  <footer>
+    <p><a href="/">Go Back to Home</a></p>
+  </footer>
+
+  <script>
+   async function getRecommendations() {
+    // Get the song name from the input field
+    const song = document.getElementById("songInput").value.trim();
+    if (!song) {
+        alert("Please enter a song!");
+        return;
+    }
+
+    try {
+        // Send a POST request to the backend
+        const response = await fetch("/recommend", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ song }),
+        });
+
+        const songList = document.getElementById("songList");
+        songList.innerHTML = ""; // Clear previous recommendations
+
+        if (response.ok) {
+            // Parse the JSON response
+            const data = await response.json();
+            console.log("Recommendations received:", data); // Debugging
+
+            // Check if recommendations exist
+            if (data.recommendations && data.recommendations.length > 0) {
+                data.recommendations.forEach((rec) => {
+                    const li = document.createElement("li");
+                    li.textContent = `${rec.name} by ${rec.artist}`;
+                    songList.appendChild(li);
+                });
+            } else {
+                songList.innerHTML = "<li>No recommendations found. Try another song.</li>";
+            }
+        } else if (response.status === 404) {
+            songList.innerHTML = "<li>Song not found. Please try another.</li>";
+        } else {
+            alert("Failed to fetch recommendations. Please try again.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again.");
+    }
+}
+
+  </script>
+</body>
+</html>
+
+
+

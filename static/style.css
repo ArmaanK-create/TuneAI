@@ -1,9 +1,9 @@
-/* General Styling */
+/* Styling for TuneAI */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple gradient */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); 
     color: #fff;
     text-align: center;
     height: 100vh;
@@ -40,47 +40,47 @@ body {
     padding: 10px;
     font-size: 1rem;
     border: none;
-    border-radius: 30px; /* Rounded edges */
+    border-radius: 30px; 
     width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
   button {
     padding: 10px 20px;
     font-size: 1rem;
     border: none;
-    border-radius: 30px; /* Rounded edges */
-    background: #ffffff; /* White background */
-    color: #6a11cb; /* Purple text */
+    border-radius: 30px; 
+    background: #ffffff; 
+    color: #6a11cb; 
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   button:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
   }
   
   button:active {
-    transform: scale(0.95); /* Shrink on click */
+    transform: scale(0.95); 
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   }
   
   /* Results Container */
   .results-container {
     margin-top: 30px;
-    background: #ffffff; /* White background */
-    border-radius: 15px; /* Rounded edges */
+    background: #ffffff; 
+    border-radius: 15px; 
     padding: 20px;
     width: 80%;
     max-width: 600px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Card shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
   }
   
   .results-container h2 {
-    color: #6a11cb; /* Purple heading */
+    color: #6a11cb; 
     margin-bottom: 20px;
   }
   
@@ -91,21 +91,21 @@ body {
   }
   
   .song-card {
-    background: #f9f9f9; /* Light background for cards */
+    background: #f9f9f9; 
     border-radius: 10px;
     padding: 15px;
     text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
   
   .song-card h3 {
     margin: 0;
-    color: #333; /* Dark text */
+    color: #333; 
   }
   
   .song-card p {
     margin: 5px 0;
-    color: #666; /* Gray text */
+    color: #666; 
   }
   
   /* Footer */
@@ -118,6 +118,24 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+  }
+
+  ul#songList {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    color: #333; 
+    font-size: 1.2rem;
+    text-align: left; 
+  }
+  
+  ul#songList li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff; 
+    border-radius: 8px;          
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    color: #6a11cb; 
   }
   
   
