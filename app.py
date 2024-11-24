@@ -3,11 +3,11 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 app = Flask(__name__)
-app.secret_key = "571315fdf3b14eb29f4db416a6c0f288"  
+app.secret_key = "~"  
 app.config['SESSION_COOKIE_NAME'] = 'TuneAI Cookie'
 
-SPOTIPY_CLIENT_ID = "f7a4c65ebaa948ac9b95ba20bbc172f6"
-SPOTIPY_CLIENT_SECRET = "571315fdf3b14eb29f4db416a6c0f288"
+SPOTIPY_CLIENT_ID = "~"
+SPOTIPY_CLIENT_SECRET = '~'
 SPOTIPY_REDIRECT_URI = "http://127.0.0.1:5000/callback"
 
 
