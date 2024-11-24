@@ -7,7 +7,7 @@ app.secret_key = "~"
 app.config['SESSION_COOKIE_NAME'] = 'TuneAI Cookie'
 
 SPOTIPY_CLIENT_ID = "~"
-SPOTIPY_CLIENT_SECRET = '~'
+SPOTIPY_CLIENT_SECRET = "~"
 SPOTIPY_REDIRECT_URI = "http://127.0.0.1:5000/callback"
 
 
